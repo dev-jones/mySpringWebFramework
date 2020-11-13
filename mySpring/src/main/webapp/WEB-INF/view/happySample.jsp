@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<h1>Dont worry, be happy!</h1>
+<h1>Don't worry, be happy!</h1>
 
 </body>
 </html>
