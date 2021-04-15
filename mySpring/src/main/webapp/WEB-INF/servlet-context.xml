@@ -9,16 +9,13 @@
 
 	<mvc:annotation-driven/>
 	
+	<context:component-scan base-package="com.devjones.web">
+		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+	</context:component-scan>
+	
 	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver"> 
 		<property name="prefix" value="/WEB-INF/view/"/>
 		<property name="suffix" value=".jsp"/>
 	</bean>
 	
-	<context:component-scan base-package="com.devjones.web" use-default-filters="false">
-		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
-		<context:include-filter type="annotation" expression="org.springframework.stereotype.Service"/>
-		<context:include-filter type="annotation" expression="org.springframework.stereotype.Repository"/>
-		<context:include-filter type="annotation" expression="org.springframework.stereotype.Component"/>
-	</context:component-scan>
-
 </beans>
